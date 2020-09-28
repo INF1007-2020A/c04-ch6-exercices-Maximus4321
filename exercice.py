@@ -5,15 +5,22 @@
 def order(values: list = None) -> list:
     if values is None:
         # TODO: demander les valeurs ici
-        pass
-
-    return []
+        values=[]
+        while len(value)<10:
+            values.append(input("Entrer une valeur/n"))
+    Sortée=sorted(values)
+    return [Sortée]
+    print(Sortée)
 
 
 def anagrams(words: list = None) -> bool:
     if words is None:
         # TODO: demander les mots ici
-        pass
+        # TODO: demander les valeurs ici
+        words = []
+        while len(value) < 2:
+            words.append(input("Entrer une valeur/n"))\
+    Organisée = sorted(words)
 
     return False
 
