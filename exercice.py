@@ -9,8 +9,7 @@ def order(values: list = None) -> list:
         while len(value)<10:
             values.append(input("Entrer une valeur/n"))
     Sortée=sorted(values)
-    return [Sortée]
-    print(Sortée)
+    return Sortée
 
 
 def anagrams(words: list = None) -> bool:
@@ -19,10 +18,14 @@ def anagrams(words: list = None) -> bool:
         # TODO: demander les valeurs ici
         words = []
         while len(value) < 2:
-            words.append(input("Entrer une valeur/n"))\
-    Organisée = sorted(words)
-
-    return False
+            words.append(input("Entrer un mot"))
+    Organisée1 = sorted(words[0])
+    Organisée2 = sorted(words[1])
+    if Organisée1==Organisée2:
+        a=True
+    else:
+        a=False
+    return a
 
 
 def contains_doubles(items: list) -> bool:
