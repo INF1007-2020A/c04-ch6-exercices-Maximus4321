@@ -6,8 +6,8 @@ def order(values: list = None) -> list:
     if values is None:
         # TODO: demander les valeurs ici
         values=[]
-        while len(value)<10:
-            values.append(input("Entrer une valeur/n"))
+        while len(values)<10:
+            values.append(input("Entrer une valeur"))
     Sortée=sorted(values)
     return Sortée
 
@@ -17,7 +17,7 @@ def anagrams(words: list = None) -> bool:
         # TODO: demander les mots ici
         # TODO: demander les valeurs ici
         words = []
-        while len(value) < 2:
+        while len(words) < 2:
             words.append(input("Entrer un mot"))
     Organisée1 = sorted(words[0])
     Organisée2 = sorted(words[1])
@@ -30,8 +30,15 @@ def contains_doubles(items: list) -> bool:
 
 
 def best_grades(student_grades: dict) -> dict:
+    highest_average=0
     # TODO: Retourner un dictionnaire contenant le nom de l'étudiant ayant la meilleure moyenne ainsi que sa moyenne
-    return {}
+    for key in student_grades:
+        average=sum(student_grades[key])/len(student_grades[key])
+    if average > highest_average:
+        highest_average=average
+        best_grade={}
+        best_grade[key]=average
+    return best_grade
 
 
 def frequence(sentence: str) -> dict:
