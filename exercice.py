@@ -21,15 +21,12 @@ def anagrams(words: list = None) -> bool:
             words.append(input("Entrer un mot"))
     Organisée1 = sorted(words[0])
     Organisée2 = sorted(words[1])
-    if Organisée1==Organisée2:
-        a=True
-    else:
-        a=False
-    return a
+    return Organisée1==Organisée2
 
 
 def contains_doubles(items: list) -> bool:
-    return False
+    ensemble = set(items)
+    return len(ensemble)!=len(items)
 
 
 def best_grades(student_grades: dict) -> dict:
