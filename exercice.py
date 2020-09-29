@@ -44,17 +44,36 @@ def best_grades(student_grades: dict) -> dict:
 def frequence(sentence: str) -> dict:
     # TODO: Afficher les lettres les plus fréquentes
     #       Retourner le tableau de lettres
-
-    return {}
-
+    wordcount={}
+    wordlist=list(sentence)
+    for character in wordlist:
+        if wordlist.count(character)>5 and character!=" ":
+            wordcount[character]=wordlist.count(character)
+    print(sorted(wordcount.items(), key=lambda x: x[1], reverse=True))
+    return sorted(wordcount.items(), key=lambda x: x[1], reverse=True)
 
 def get_recipes():
     # TODO: Demander le nom d'une recette, puis ses ingredients et enregistrer dans une structure de données
-    pass
+    Recettes={}
+    while 1<2:
+        print("Inscrivez le nom d'une recette ici, écrivez None si vous n'avez plus de recettes à ajouter:")
+        Nom_De_recettes=input()
+        if Nom_De_recettes == "None":
+            break
+        else:
+            print("Inscrivez les ingrédients d'une recette ici:")
+            Ingrédients=input()
+            Recettes[Nom_De_recettes]=Ingrédients
+    return Recettes
 
 
 def print_recipe(ingredients) -> None:
     # TODO: Demander le nom d'une recette, puis l'afficher si elle existe
+    Recette_demandée=input()
+    if Recette_demandée in ingredients:
+        print(ingrédients[Recette_demandée])
+    else:
+        print("Cette recette n'existe pas")
     pass
 
 
